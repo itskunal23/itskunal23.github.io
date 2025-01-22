@@ -1,76 +1,90 @@
 #projects {
-  background-color: $white-color;
-  color: $dark-blue-text;
-  margin-top: -10rem;
-  padding-top: 15rem;
-
-  @include respond(tab-land) {
-    margin-top: 0;
-    padding-top: 5rem;
-  }
+  background-color: #f9f9f9; /* Light neutral background for elegance */
+  color: #333; /* Dark neutral text color for readability */
+  padding: 60px 0;
 
   .project-wrapper {
-    margin-bottom: 15rem;
+    margin-bottom: 40px;
 
-    @include respond(phone) {
-      margin-bottom: 0rem;
+    .project-row {
+      display: flex;
+      flex-direction: column;
+      gap: 30px; /* Space between projects */
     }
 
-    .row {
-      margin-bottom: 8rem;
+    .project {
+      background: #ffffff; /* White card for contrast */
+      border: 1px solid #e0e0e0; /* Subtle border around the project */
+      border-radius: 8px; /* Rounded corners for a modern look */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      padding: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-      @include respond(phone) {
-        margin-bottom: 4rem;
-      }
-    }
-
-    &__text {
-      text-align: left;
-
-      @include respond(phone) {
-        margin-bottom: 2.5rem !important;
-      }
-      @include respond(tab-land) {
-        margin-bottom: 4.8rem;
+      &:hover {
+        transform: translateY(-5px); /* Subtle lift on hover */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
       }
 
-      &-title {
-        font-weight: bold;
-        margin-bottom: 1.8rem;
-        font-size: $mid-font-size;
+      &__image {
+        text-align: center;
+        margin-bottom: 15px;
 
-        @include respond(phone) {
-          font-size: 2rem;
+        img {
+          width: 100%; /* Ensure responsiveness */
+          max-width: 300px; /* Uniform width for all images */
+          height: 200px; /* Fixed height for consistency */
+          object-fit: cover; /* Crops the image while maintaining aspect ratio */
+          border-radius: 5px; /* Smooth edges */
+          border: 1px solid #e0e0e0; /* Thin border around the image */
         }
       }
 
-      & p > a {
-        color: $secondary-color;
-      }
-    }
+      &__text {
+        text-align: center;
 
-    &__image {
-      width: 90%;
-      margin: 0 auto;
+        &-title {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: #0077b5; /* LinkedIn blue for emphasis */
+          margin-bottom: 10px;
+        }
 
-      @include respond(tab-land) {
-        width: 100%;
-        margin: 0;
-      }
+        p {
+          font-size: 1rem;
+          color: #555; /* Neutral gray for readability */
+          line-height: 1.6;
+          margin-bottom: 15px;
+        }
 
-      & .thumbnail {
-        border: none;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        transition: all 0.2s ease-out;
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
-        transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
-          0.5s box-shadow,
-          0.5s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+        .cta-btn {
+          display: inline-block;
+          font-size: 0.9rem;
+          font-weight: 600;
+          padding: 10px 15px;
+          border-radius: 5px;
+          text-decoration: none;
+          transition: background-color 0.3s ease, color 0.3s ease;
 
-        @include respond(phone) {
-          border: 1px solid $light-grey;
-          box-shadow: none;
-          margin-bottom: 3.2rem;
+          &--hero {
+            background-color: #0077b5; /* LinkedIn blue */
+            color: #ffffff;
+            margin-right: 10px;
+
+            &:hover {
+              background-color: #005f93; /* Darker blue on hover */
+            }
+          }
+
+          &.text-color-main {
+            color: #0077b5;
+            border: 1px solid #0077b5;
+            background: transparent;
+
+            &:hover {
+              background-color: #0077b5;
+              color: #ffffff;
+            }
+          }
         }
       }
     }

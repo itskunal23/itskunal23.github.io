@@ -4,35 +4,53 @@
     $primary-color 0%,
     $secondary-color 100%
   );
-  -webkit-clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  clip-path: polygon(0 15vh, 100% 0, 100% 100%, 0 100%);
-  padding: 15rem 0 10rem 0;
-  margin-top: -10rem;
-  margin-bottom: -1px;
+  -webkit-clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 10vh, 100% 0, 100% 100%, 0 100%);
+  padding: 10rem 0 8rem 0;
+  margin-top: -8rem;
   color: $white-color;
 
   @include respond(tab-land) {
-    padding: 10rem 0;
+    padding: 8rem 0;
     clip-path: none;
     margin-top: 0;
     -webkit-clip-path: none;
   }
 
   .contact-wrapper {
-    margin-top: 3.2rem;
-    padding: 0 2rem;
-    backface-visibility: hidden;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: rgba(255, 255, 255, 0.1); // Subtle overlay for text focus
+    border-radius: 12px; // Rounded corners for the card
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); // Depth for the card
 
     &__text {
-      margin-bottom: 2.5rem;
-    }
-
-    &__text,
-    a {
-      font-size: 2.4rem;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+      color: #ffffff; // Ensure readability on gradient background
 
       @include respond(phone) {
-        font-size: 2rem;
+        font-size: 1.8rem;
+      }
+    }
+
+    .cta-btn {
+      display: inline-block;
+      font-size: 1.4rem;
+      font-weight: 600;
+      padding: 12px 24px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: $white-color;
+      background-color: #0077b5; // LinkedIn blue for the button
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        background-color: #005f93; // Darker blue on hover
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); // Subtle elevation on hover
       }
     }
   }

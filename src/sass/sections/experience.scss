@@ -1,0 +1,87 @@
+#experience {
+  padding: 100px 0;
+  background-color: #f3f2ef; // Light LinkedIn gray for a clean background
+
+  .experience-wrapper__info {
+    margin-top: 40px;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 20px;
+      width: 2px; // Thinner line for a more subtle effect
+      height: 100%;
+      background-color: #d0d0d0;
+    }
+
+    .experience-item {
+      margin-bottom: 50px;
+      padding-left: 60px;
+      position: relative;
+
+      &:hover {
+        background-color: rgba(0, 115, 177, 0.05); // Slight background change on hover
+        border-radius: 8px;
+        padding: 20px 60px;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 15px;
+        left: 10px;
+        width: 15px;
+        height: 15px;
+        background-color: #0073b1; // LinkedIn blue for the timeline marker
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+      }
+
+      .experience-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #0073b1; // LinkedIn blue for emphasis
+        margin-bottom: 5px;
+      }
+
+      .experience-company {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #333; // Neutral dark color for company names
+        margin-top: 5px;
+      }
+
+      .experience-duration {
+        font-size: 1.4rem;
+        color: #666;
+        margin-top: 3px;
+        font-style: italic;
+      }
+
+      .experience-description {
+        font-size: 1.5rem;
+        margin-top: 10px;
+        color: #444;
+        line-height: 1.8;
+
+        ul {
+          margin-top: 10px;
+          padding-left: 20px;
+          list-style-type: disc;
+
+          li {
+            margin-bottom: 8px;
+            color: #333;
+            text-align: left;
+            font-size: 1.4rem;
+            line-height: 1.6;
+          }
+        }
+      }
+    }
+  }
+}

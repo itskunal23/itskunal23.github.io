@@ -1,0 +1,156 @@
+#education {
+    background-color: #861f41; // Virginia Tech Maroon
+    background-image: linear-gradient(
+      135deg,
+      #861f41 0%, // VT Maroon
+    );
+    color: #ffffff; // White text for contrast
+    height: 100%;
+    border-top: 0px;
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+    padding-bottom: 10%;
+  
+    @include respond(tab-land) {
+      height: 100%;
+      -webkit-clip-path: none;
+      clip-path: none;
+    }
+  
+    .education-wrapper {
+      @include respond(phone) {
+        padding-bottom: 5rem;
+      }
+  
+      .education-wrapper__icons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 20px;
+  
+        a {
+          display: inline-block;
+  
+          img.icon {
+            width: 60px;
+            height: 60px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+            &:hover {
+              transform: scale(1.2);
+              box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            }
+          }
+        }
+      }
+  
+      &__image {
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 2rem;
+  
+        @include respond(tab-land) {
+          height: 100%;
+        }
+        @include respond(tab-port-sm) {
+          padding-bottom: 6.4rem;
+        }
+  
+        img {
+          max-width: 300px;
+          border-radius: 10px;
+          border: 2px solid #ffffff;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+      }
+  
+      &__info {
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        flex-direction: column;
+  
+        @include respond(tab-port-sm) {
+          align-items: center;
+        }
+  
+        &-text {
+          text-align: left;
+  
+          @include respond(tab-port) {
+            text-align: left;
+          }
+          @include respond(tab-port-sm) {
+            text-align: center;
+          }
+  
+          &--important {
+            background: lighten(#c4a12f, 10%); // Slightly lighter VT Gold
+            display: inline-block;
+            font-style: italic;
+            padding: 0 0.5rem;
+            margin: 0.5rem 0;
+            line-height: 1.6;
+            color: #ffffff;
+  
+            @include respond(phone) {
+              display: inline;
+              margin: 0;
+              padding: 0;
+              background: transparent;
+              font-style: normal;
+            }
+          }
+        }
+  
+        h2 {
+          color: #ffffff;
+          font-size: 2.5rem;
+          margin-bottom: 1rem;
+          font-weight: bold;
+  
+          @include respond(phone) {
+            font-size: 2rem;
+          }
+        }
+  
+        p {
+          color: #f1f1f1;
+          line-height: 1.8;
+          font-size: 1.8rem;
+          margin-bottom: 1.5rem;
+  
+          @include respond(phone) {
+            font-size: 1rem;
+          }
+        }
+  
+        a {
+          color: #c4a12f; // VT Gold for links
+          font-weight: bold;
+          text-decoration: none;
+          transition: color 0.3s ease;
+  
+          &:hover {
+            color: lighten(#c4a12f, 15%);
+          }
+        }
+      }
+    }
+  }
+  
+  // Activities List - Styled to match H3 size
+  ul.activities-list {
+    list-style-type: none;
+    padding: 0;
+  
+    li {
+      font-size: 1.75rem; // Equivalent to h3 size
+      font-weight: bold;
+      color: #ffffff; // White text for contrast
+      margin-bottom: 10px;
+    }
+  }
+  

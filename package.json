@@ -6,7 +6,8 @@
   "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build"
+    "build": "parcel build",
+    "dev": "parcel src/index.html"
   },
   "repository": {
     "type": "git",
@@ -21,7 +22,7 @@
   "homepage": "https://github.com/cobidev/simplefolio#readme",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.13.3",
-    "parcel": "^2.0.1",
+    "parcel": "^2.13.3",
     "prettier": "^2.4.1"
   },
   "dependencies": {

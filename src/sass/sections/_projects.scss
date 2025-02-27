@@ -1,7 +1,8 @@
 #projects {
-  background-color: #f9f9f9; /* Light neutral background for elegance */
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0); /* Gradient background */
   color: #333; /* Dark neutral text color for readability */
   padding: 60px 0;
+  transition: background 0.3s ease; /* Smooth transition for background changes */
 
   .project-wrapper {
     margin-bottom: 40px;
@@ -9,6 +10,7 @@
     .project-row {
       display: flex;
       flex-direction: column;
+      align-items: center; /* Center the project cards */
       gap: 30px; /* Space between projects */
     }
 
@@ -18,11 +20,13 @@
       border-radius: 8px; /* Rounded corners for a modern look */
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
       padding: 20px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      max-width: 60%; /* Reduce the width of the project card */
+      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
 
       &:hover {
-        transform: translateY(-5px); /* Subtle lift on hover */
-        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        transform: translateY(-10px); /* More pronounced lift on hover */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
+        background: #f0f0f0; /* Slight background change on hover */
       }
 
       &__image {
@@ -31,11 +35,16 @@
 
         img {
           width: 100%; /* Ensure responsiveness */
-          max-width: 300px; /* Uniform width for all images */
-          height: 200px; /* Fixed height for consistency */
+          max-width: 250px; /* Reduce the width of the images */
+          height: 180px; /* Adjust height for consistency */
           object-fit: cover; /* Crops the image while maintaining aspect ratio */
           border-radius: 5px; /* Smooth edges */
           border: 1px solid #e0e0e0; /* Thin border around the image */
+          transition: transform 0.3s ease; /* Smooth image transition */
+
+          &:hover {
+            transform: scale(1.05); /* Slight zoom on hover */
+          }
         }
       }
 
@@ -47,6 +56,11 @@
           font-weight: 600;
           color: #0077b5; /* LinkedIn blue for emphasis */
           margin-bottom: 10px;
+          transition: color 0.3s ease; /* Smooth color transition */
+
+          &:hover {
+            color: #005f93; /* Darker color on hover */
+          }
         }
 
         p {

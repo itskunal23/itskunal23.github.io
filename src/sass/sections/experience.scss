@@ -1,6 +1,6 @@
 #experience {
   padding: 100px 0;
-  background-color: #f3f2ef; // Light LinkedIn gray for a clean background
+  background-color: #ffffff; /* Light LinkedIn gray for a clean background */
 
   .experience-wrapper__info {
     margin-top: 40px;
@@ -11,21 +11,22 @@
       position: absolute;
       top: 0;
       left: 20px;
-      width: 2px; // Thinner line for a more subtle effect
+      width: 2px; /* Thinner line for a more subtle effect */
       height: 100%;
-      background-color: #d0d0d0;
+      background-color: #000000;
     }
 
     .experience-item {
       margin-bottom: 50px;
       padding-left: 60px;
       position: relative;
+      box-sizing: border-box; /* Prevents padding from affecting width */
 
       &:hover {
-        background-color: rgba(0, 115, 177, 0.05); // Slight background change on hover
+        background-color: rgba(0, 115, 177, 0.05); /* Slight background change on hover */
         border-radius: 8px;
         padding: 20px 60px;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.1s ease-in-out;
       }
 
       &::before {
@@ -35,7 +36,7 @@
         left: 10px;
         width: 15px;
         height: 15px;
-        background-color: #0073b1; // LinkedIn blue for the timeline marker
+        background-color: #0073b1; /* LinkedIn blue for the timeline marker */
         border-radius: 50%;
         border: 3px solid #fff;
         box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
@@ -44,28 +45,28 @@
       .experience-title {
         font-size: 2rem;
         font-weight: 700;
-        color: #0073b1; // LinkedIn blue for emphasis
+        color: #0073b1; /* LinkedIn blue for emphasis */
         margin-bottom: 5px;
       }
 
       .experience-company {
         font-size: 1.8rem;
         font-weight: 600;
-        color: #333; // Neutral dark color for company names
+        color: #000000; /* Neutral dark color for company names */
         margin-top: 5px;
       }
 
       .experience-duration {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         color: #666;
         margin-top: 3px;
         font-style: italic;
       }
 
       .experience-description {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         margin-top: 10px;
-        color: #444;
+        color: #000000;
         line-height: 1.8;
 
         ul {

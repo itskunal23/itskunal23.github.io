@@ -1,103 +1,148 @@
 #projects {
-  background: linear-gradient(135deg, #f9f9f9, #e0e0e0); /* Gradient background */
-  color: #333; /* Dark neutral text color for readability */
-  padding: 60px 0;
-  transition: background 0.3s ease; /* Smooth transition for background changes */
+  background: linear-gradient(135deg, #f9f9f9, #e0e0e0);
+  color: #333;
+  padding: 80px 0;
+  transition: background 0.3s ease;
 
   .project-wrapper {
-    margin-bottom: 40px;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+  }
 
-    .project-row {
-      display: flex;
-      flex-direction: column;
-      align-items: center; /* Center the project cards */
-      gap: 30px; /* Space between projects */
+  .project-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    gap: 40px;
+    justify-content: center;
+    align-items: stretch;
+  }
+
+  .project {
+    background: #ffffff4b;
+    border: 4px solid #d1d1d1;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background: #f3f3f3;
     }
 
-    .project {
-      background: #ffffff; /* White card for contrast */
-      border: 1px solid #e0e0e0; /* Subtle border around the project */
-      border-radius: 8px; /* Rounded corners for a modern look */
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-      padding: 20px;
-      max-width: 60%; /* Reduce the width of the project card */
-      transition: transform 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+    &__image-box {
+      width: 100%;
+      max-width: 320px;
+      background: #fff;
+      border: 3px solid #d1d1d1;
+      border-radius: 12px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 25px;
+      transition: box-shadow 0.3s ease;
 
       &:hover {
-        transform: translateY(-10px); /* More pronounced lift on hover */
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow */
-        background: #f0f0f0; /* Slight background change on hover */
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.2s ease;
+
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
       }
 
-      &__image {
-        text-align: center;
-        margin-bottom: 15px;
+      &:hover img {
+        transform: scale(1.04);
+      }
+    }
 
-        img {
-          width: 100%; /* Ensure responsiveness */
-          max-width: 250px; /* Reduce the width of the images */
-          height: 180px; /* Adjust height for consistency */
-          object-fit: cover; /* Crops the image while maintaining aspect ratio */
-          border-radius: 5px; /* Smooth edges */
-          border: 1px solid #e0e0e0; /* Thin border around the image */
-          transition: transform 0.3s ease; /* Smooth image transition */
+    &__text {
+      width: 100%;
+      text-align: center;
 
-          &:hover {
-            transform: scale(1.05); /* Slight zoom on hover */
-          }
+      &-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #0077b5;
+        padding: 12px 15px;
+        border: 3px solid #0077b5;
+        border-radius: 4px;
+        width: fit-content;
+        margin: 0 auto 20px auto;
+        background-color: #f9f9f9;
+        transition: color 0.3s ease, border 0.3s ease, background 0.3s ease;
+
+        &:hover {
+          color: #005f93;
+          border: 3px solid #005f93;
+          background-color: #e6f1fa;
         }
       }
 
-      &__text {
-        text-align: center;
+      /* ✅ FIXED TEXT SPACING ISSUE */
+      p {
+        font-size: 1.4rem;
+        color: #000000;
+        line-height: 1.5;
+        padding: 12px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        width: 90%;
+        margin: 10px auto;
+        text-align: left; /* FIXED: No forced justification */
+        word-spacing: normal;
+        hyphens: auto; /* Helps with word breaks */
+        overflow-wrap: break-word; /* Ensures text stays inside container */
+      }
 
-        &-title {
-          font-size: 1.5rem;
-          font-weight: 600;
-          color: #0077b5; /* LinkedIn blue for emphasis */
-          margin-bottom: 10px;
-          transition: color 0.3s ease; /* Smooth color transition */
+      .cta-btn {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: bold;
+        padding: 12px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, color 0.3s ease;
+        margin-top: 15px;
+
+        &--hero {
+          background-color: #0077b5;
+          color: #ffffff;
+          border: 2px solid #0077b5;
 
           &:hover {
-            color: #005f93; /* Darker color on hover */
+            background-color: #005f93;
+            border-color: #005f93;
           }
         }
 
-        p {
-          font-size: 1rem;
-          color: #555; /* Neutral gray for readability */
-          line-height: 1.6;
-          margin-bottom: 15px;
-        }
+        &.text-color-main {
+          color: #0077b5;
+          border: 2px solid #0077b5;
+          background: transparent;
 
-        .cta-btn {
-          display: inline-block;
-          font-size: 0.9rem;
-          font-weight: 600;
-          padding: 10px 15px;
-          border-radius: 5px;
-          text-decoration: none;
-          transition: background-color 0.3s ease, color 0.3s ease;
-
-          &--hero {
-            background-color: #0077b5; /* LinkedIn blue */
+          &:hover {
+            background-color: #0077b5;
             color: #ffffff;
-            margin-right: 10px;
-
-            &:hover {
-              background-color: #005f93; /* Darker blue on hover */
-            }
-          }
-
-          &.text-color-main {
-            color: #0077b5;
-            border: 1px solid #0077b5;
-            background: transparent;
-
-            &:hover {
-              background-color: #0077b5;
-              color: #ffffff;
-            }
           }
         }
       }

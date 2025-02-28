@@ -10,30 +10,27 @@
       content: "";
       position: absolute;
       top: 0;
-      left: 20px;
-      width: 2px; /* Thinner line for a more subtle effect */
+      left: -40px;
+      width: 3px; /* Thinner line for a more subtle effect */
       height: 100%;
       background-color: #000000;
     }
 
     .experience-item {
       margin-bottom: 50px;
-      padding-left: 60px;
+      padding-left: 5px;
       position: relative;
       box-sizing: border-box; /* Prevents padding from affecting width */
-
-      &:hover {
-        background-color: rgba(0, 115, 177, 0.05); /* Slight background change on hover */
-        border-radius: 8px;
-        padding: 20px 60px;
-        transition: all 0.1s ease-in-out;
-      }
+      text-align: center; /* Ensures all text is centered */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Aligns all items to the center */
 
       &::before {
         content: "";
         position: absolute;
         top: 15px;
-        left: 10px;
+        left: -45px;
         width: 15px;
         height: 15px;
         background-color: #0073b1; /* LinkedIn blue for the timeline marker */
@@ -47,6 +44,12 @@
         font-weight: 700;
         color: #0073b1; /* LinkedIn blue for emphasis */
         margin-bottom: 5px;
+      }
+
+      .experience-meta {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Ensures alignment of role, company, and duration */
       }
 
       .experience-company {
@@ -64,14 +67,15 @@
       }
 
       .experience-description {
-        font-size: 1.8rem;
+        font-size: 2.0rem;
         margin-top: 10px;
         color: #000000;
         line-height: 1.8;
+        text-align: left; /* Ensures descriptions remain left-aligned */
 
         ul {
           margin-top: 10px;
-          padding-left: 20px;
+          padding-left: 0px;
           list-style-type: disc;
 
           li {
